@@ -831,7 +831,7 @@ import soc_ifc_pkg::*;
 // to avoid internal assertions failure at time 0
 initial begin
     $assertoff(0, veer);
-    @ (negedge clk) $asserton(0, veer);
+    @ (posedge rst_l) $asserton(0, veer);
 end
 `endif
 
